@@ -1,0 +1,300 @@
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+_apt:x:104:65534::/nonexistent:/bin/false
+messagebus:x:105:109::/var/run/dbus:/bin/false
+sshd:x:106:65534::/run/sshd:/usr/sbin/nologin
+velin:x:1000:1000:Alexander Velin,,,:/home/velin:/bin/bash
+unbound:x:108:116::/var/lib/unbound:/usr/sbin/nologin
+human:x:1001:1001:Ангел Ангелов,,,:/home/human:/bin/bash
+postfix:x:107:114::/var/spool/postfix:/usr/sbin/nologin
+munin:x:109:117:munin application user,,,:/var/lib/munin:/usr/sbin/nologin
+kpacu:x:1002:1002::/home/teachers/kpacu:/bin/bash
+irina:x:1003:1002::/home/teachers/irina:/bin/bash
+katrin:x:1004:1002::/home/teachers/katrin:/bin/bash
+maria:x:1005:1002::/home/teachers/maria:/bin/bash
+s12345:x:1006:1003:Студент Студентов,,,:/home/students/s12345:/bin/bash
+s61949:x:1007:1003:Николай Косев,,,,nikosev@uni-sofia.bg:/home/students/s61949:/bin/bash
+s61995:x:1008:1003:Борислав Георгиев,,,,borislavzg@uni-sofia.bg:/home/students/s61995:/bin/bash
+s62011:x:1009:1003:Иван Шишев,,,,ivan.shishev@gmail.com:/home/students/s62011:/bin/bash
+s62030:x:1010:1003:Петър Русев,,,,pgrusev@uni-sofia.bg:/home/students/s62030:/bin/bash
+s62053:x:1011:1003:Костадин Койков,,,,kkojkov@uni-sofia.bg:/home/students/s62053:/bin/bash
+s62235:x:1012:1003:Любомир Мицев,,,,lyubomir_mitzev@abv.bg:/home/students/s62235:/bin/bash
+s62370:x:1013:1003:Анна Сарамбелиева,,,,sarambelie@uni-sofia.bg:/home/students/s62370:/bin/bash
+s62371:x:1014:1003:Васил Ляляков,,,,ljaljakov@uni-sofia.bg:/home/students/s62371:/bin/bash
+s62372:x:1015:1003:Кристияна Николова,,,,kristijasn@uni-sofia.bg:/home/students/s62372:/bin/bash
+s62373:x:1016:1003:Петър Петров,,,,peturzp@uni-sofia.bg:/home/students/s62373:/bin/bash
+s62374:x:1017:1003:Христиан Илиев,,,,hristiani@uni-sofia.bg:/home/students/s62374:/bin/bash
+s62375:x:1018:1003:Христо Дойчев,,,,hddojchev@uni-sofia.bg:/home/students/s62375:/bin/bash
+s62378:x:1019:1003:Евгени Игнатов,,,,enignatov@uni-sofia.bg:/home/students/s62378:/bin/bash
+s62379:x:1020:1003:Мартин Раванов,,,,m.ravanov@gmail.com:/home/students/s62379:/bin/bash
+s62380:x:1021:1003:Георги Събев,,,,gjsubev@uni-sofia.bg:/home/students/s62380:/bin/bash
+s62381:x:1022:1003:Виктор Нейков,,,,vcnejkov@uni-sofia.bg:/home/students/s62381:/bin/bash
+s62382:x:1023:1003:Александър Стоилов,,,,alexanderstoilov2000@gmail.com:/home/students/s62382:/bin/bash
+s62383:x:1024:1003:Боян Богданов,,,,babogdanov@uni-sofia.bg:/home/students/s62383:/bin/bash
+s62384:x:1025:1003:Даниел Димитров,,,,danield2@uni-sofia.bg:/home/students/s62384:/bin/bash
+s62385:x:1026:1003:Кристина Горанова,,,,kdgoranova@uni-sofia.bg:/home/students/s62385:/bin/bash
+s62386:x:1027:1003:Александър Спасов,,,,arspasov@uni-sofia.bg:/home/students/s62386:/bin/bash
+s62387:x:1028:1003:Иво Песев,,,,pesevivo@gmail.com:/home/students/s62387:/bin/bash
+s62388:x:1029:1003:Станислав Христов,,,,stanislavhristov00@abv.bg:/home/students/s62388:/bin/bash
+s62389:x:1030:1003:Ирина Стоева,,,,instoeva@uni-sofia.bg:/home/students/s62389:/bin/bash
+s62390:x:1031:1003:Мирослав Дионисиев,,,,mddionisie@uni-sofia.bg:/home/students/s62390:/bin/bash
+s62391:x:1032:1003:Надежда Францева,,,,franceva@uni-sofia.bg:/home/students/s62391:/bin/bash
+s62392:x:1033:1003:Марио Николов,,,,mario.nikolov1501@gmail.com:/home/students/s62392:/bin/bash
+s62393:x:1034:1003:Павел Сарлов,,,,sarlovpavel@gmail.com:/home/students/s62393:/bin/bash
+s62394:x:1035:1003:Цветелина Бочева,,,,tsvetelina.31.botcheva@gmail.com:/home/students/s62394:/bin/bash
+s62395:x:1036:1003:Владимир Карачомаков,,,,vkarachoma@uni-sofia.bg:/home/students/s62395:/bin/bash
+s62396:x:1037:1003:Виктор Върбанов,,,,viktorgv@uni-sofia.bg:/home/students/s62396:/bin/bash
+s62397:x:1038:1003:Даниел Рушидов,,,,drushidov@uni-sofia.bg:/home/students/s62397:/bin/bash
+s62398:x:1039:1003:Йоанна Благоева,,,,jdblagoeva@uni-sofia.bg:/home/students/s62398:/bin/bash
+s62399:x:1040:1003:Александър Цонев,,,,aiconev@uni-sofia.bg:/home/students/s62399:/bin/bash
+s62401:x:1041:1003:Стоян Габровски,,,,sgabrovski@uni-sofia.bg:/home/students/s62401:/bin/bash
+s62403:x:1042:1003:Георги Недков,,,,gcnedkov@uni-sofia.bg:/home/students/s62403:/bin/bash
+s62404:x:1043:1003:Николай Мирчев,,,,nkmirchev@uni-sofia.bg:/home/students/s62404:/bin/bash
+s62405:x:1044:1003:Аргир Бояджиев,,,,argirb@uni-sofia.bg:/home/students/s62405:/bin/bash
+s62407:x:1045:1003:Васил Боцев,,,,vkbocev@uni-sofia.bg:/home/students/s62407:/bin/bash
+s62408:x:1046:1003:Христо Белев,,,,hbelev@uni-sofia.bg:/home/students/s62408:/bin/bash
+s62409:x:1047:1003:Адем Црънчалиев,,,,ademcran4aliev@abv.bg:/home/students/s62409:/bin/bash
+s62410:x:1048:1003:Искра Божкова,,,,iskrabojkova8@gmail.com:/home/students/s62410:/bin/bash
+s62411:x:1049:1003:Константин Димитров,,,,k.dimitrov.n@gmail.com:/home/students/s62411:/bin/bash
+s62412:x:1050:1003:Даниел Янев,,,,yanev89@gmail.com:/home/students/s62412:/bin/bash
+s62413:x:1051:1003:Стоян Михайлов,,,,splamenovm@uni-sofia.bg:/home/students/s62413:/bin/bash
+s62414:x:1052:1003:Виктор Венков,,,,vpvenkov@uni-sofia.bg:/home/students/s62414:/bin/bash
+s62415:x:1053:1003:Иван Цвятков,,,,icvjatkov@uni-sofia.bg:/home/students/s62415:/bin/bash
+s62416:x:1054:1003:Гергана Георгиева,,,,gkalinovag@uni-sofia.bg:/home/students/s62416:/bin/bash
+s62417:x:1055:1003:Станислав Игнатов,,,,Sta402000@abv.bg:/home/students/s62417:/bin/bash
+s62418:x:1056:1003:Евтим Иванов,,,,evtimi@uni-sofia.bg:/home/students/s62418:/bin/bash
+s62420:x:1057:1003:Даниел Георгиев,,,,danielvg1@uni-sofia.bg:/home/students/s62420:/bin/bash
+s62421:x:1058:1003:Димитър Тачев,,,,dimitartachev23@gmail.com:/home/students/s62421:/bin/bash
+s62422:x:1059:1003:Ани Бейбутян,,,,bejbutjan@uni-sofia.bg:/home/students/s62422:/bin/bash
+s62424:x:1060:1003:Тереза Димитрова,,,,terezadd@uni-sofia.bg:/home/students/s62424:/bin/bash
+s62425:x:1061:1003:Ния Миковска,,,,nmikovska@uni-sofia.bg:/home/students/s62425:/bin/bash
+s62426:x:1062:1003:Йолина Вълчева,,,,jjvulcheva@uni-sofia.bg:/home/students/s62426:/bin/bash
+s62427:x:1063:1003:Стилиян Раев,,,,stilra@abv.bg:/home/students/s62427:/bin/bash
+s62428:x:1064:1003:Велислава Петкова,,,,velislavvp@uni-sofia.bg:/home/students/s62428:/bin/bash
+s62429:x:1065:1003:Никола Ласков,,,,kokolaskov@gmail.com:/home/students/s62429:/bin/bash
+s62430:x:1066:1003:Юлиан Чавдаров,,,,jachavdaro@uni-sofia.bg:/home/students/s62430:/bin/bash
+s62431:x:1067:1003:Васил Христов,,,,vasiljh@uni-sofia.bg:/home/students/s62431:/bin/bash
+s62433:x:1068:1003:Иван Станчев,,,,ivands@uni-sofia.bg:/home/students/s62433:/bin/bash
+s62434:x:1069:1003:Георги Бойчев,,,,georgiboychevv@gmail.com:/home/students/s62434:/bin/bash
+s62435:x:1070:1003:Симона Асенова,,,,ssasenova@uni-sofia.bg:/home/students/s62435:/bin/bash
+s62436:x:1071:1003:Калин Примов,,,,kprimov@uni-sofia.bg:/home/students/s62436:/bin/bash
+s62437:x:1072:1003:Ана Стоянова,,,,srebrinova@uni-sofia.bg:/home/students/s62437:/bin/bash
+s62438:x:1073:1003:Иван Апостолов,,,,iapostolo1@uni-sofia.bg:/home/students/s62438:/bin/bash
+s62440:x:1074:1003:Айлин Чеушева,,,,aylin_10@abv.bg:/home/students/s62440:/bin/bash
+s62441:x:1075:1003:Богдан Косев,,,,bakosev@uni-sofia.bg:/home/students/s62441:/bin/bash
+s62442:x:1076:1003:Мартин Златев,,,,mzzlatev@uni-sofia.bg:/home/students/s62442:/bin/bash
+s62443:x:1077:1003:Джейлян Садъкова,,,,dsadukova@uni-sofia.bg:/home/students/s62443:/bin/bash
+s62444:x:1078:1003:Севда Кръстева,,,,sevdak@uni-sofia.bg:/home/students/s62444:/bin/bash
+s62445:x:1079:1003:Мария Велева,,,,mgveleva1@uni-sofia.bg:/home/students/s62445:/bin/bash
+s62446:x:1080:1003:Виктория Месова,,,,mesova@uni-sofia.bg:/home/students/s62446:/bin/bash
+s62447:x:1081:1003:Полина Петрова,,,,polinapp1@uni-sofia.bg:/home/students/s62447:/bin/bash
+s62448:x:1082:1003:Силвия Деянова,,,,sjdejanova@uni-sofia.bg:/home/students/s62448:/bin/bash
+s62449:x:1083:1003:Радостин Маринов,,,,rgmarinov@uni-sofia.bg:/home/students/s62449:/bin/bash
+s62450:x:1084:1003:Тодор Стаматов,,,,tgstamatov@uni-sofia.bg:/home/students/s62450:/bin/bash
+s62451:x:1085:1003:Тодор Добрев,,,,tsdobrev@uni-sofia.bg:/home/students/s62451:/bin/bash
+s62452:x:1086:1003:Михаела Гаджалова,,,,migadzhalo@uni-sofia.bg:/home/students/s62452:/bin/bash
+s62455:x:1087:1003:Андрея Дяксова,,,,aidjaksova@uni-sofia.bg:/home/students/s62455:/bin/bash
+s62456:x:1088:1003:Искрен Банински,,,,iskrenbaninski@gmail.com:/home/students/s62456:/bin/bash
+s62457:x:1089:1003:Алекс Божинов,,,,aleksb@uni-sofia.bg:/home/students/s62457:/bin/bash
+s62459:x:1090:1003:Кристиан Какалов,,,,kris.kakalov@gmail.com:/home/students/s62459:/bin/bash
+s62460:x:1091:1003:Николай Натов,,,,nikinatov0046@gmail.com:/home/students/s62460:/bin/bash
+s62461:x:1092:1003:Виктор Димитров,,,,viktormd@uni-sofia.bg:/home/students/s62461:/bin/bash
+s62462:x:1093:1003:Добромира Тенчева,,,,dobi.tencheva@gmail.com:/home/students/s62462:/bin/bash
+s62463:x:1094:1003:Станислава Иванова,,,,stanislgi1@uni-sofia.bg:/home/students/s62463:/bin/bash
+s62465:x:1095:1003:Павел Мърмъров,,,,murmurov@uni-sofia.bg:/home/students/s62465:/bin/bash
+s62466:x:1096:1003:Иван Костадинов,,,,ivanvk@uni-sofia.bg:/home/students/s62466:/bin/bash
+s62467:x:1097:1003:Теодор Везенков,,,,tvezenkov@uni-sofia.bg:/home/students/s62467:/bin/bash
+s62468:x:1098:1003:Надежда Панделиева,,,,npandeliev@uni-sofia.bg:/home/students/s62468:/bin/bash
+s62469:x:1099:1003:Ангел Марински,,,,amarinski@uni-sofia.bg:/home/students/s62469:/bin/bash
+s62470:x:1100:1003:Айше Джинджи,,,,aidzhindzh@uni-sofia.bg:/home/students/s62470:/bin/bash
+s62471:x:1101:1003:Васил Сусанин,,,,vsusanin@uni-sofia.bg:/home/students/s62471:/bin/bash
+s62472:x:1102:1003:Таня Сейкова,,,,tanya.seykova@gmail.com:/home/students/s62472:/bin/bash
+s62473:x:1103:1003:Ирина Христова,,,,cvetanovah@uni-sofia.bg:/home/students/s62473:/bin/bash
+s62474:x:1104:1003:Цветомир Илиев,,,,csiliev@uni-sofia.bg:/home/students/s62474:/bin/bash
+s62475:x:1105:1003:Георги Чобанов,,,,gdchobanov@uni-sofia.bg:/home/students/s62475:/bin/bash
+s62476:x:1106:1003:Георги Ангелов,,,,gtangelov@uni-sofia.bg:/home/students/s62476:/bin/bash
+s62477:x:1107:1003:Светослав Димов,,,,sddimov1@uni-sofia.bg:/home/students/s62477:/bin/bash
+s62478:x:1108:1003:Иван Димитров,,,,istanislad@uni-sofia.bg:/home/students/s62478:/bin/bash
+s62479:x:1109:1003:Ивайло Белчев,,,,fn62479@g.fmi.uni-sofia.bg:/home/students/s62479:/bin/bash
+s62480:x:1110:1003:Ивана Драгнева,,,,indragneva@uni-sofia.bg:/home/students/s62480:/bin/bash
+s62481:x:1111:1003:Ирина Стоичкова,,,,irinais@uni-sofia.bg:/home/students/s62481:/bin/bash
+s62482:x:1112:1003:Александър Желязков,,,,aleksandkz@uni-sofia.bg:/home/students/s62482:/bin/bash
+s62483:x:1113:1003:Илия Вълов,,,,ivvulov@uni-sofia.bg:/home/students/s62483:/bin/bash
+s62485:x:1114:1003:Христо Маринов,,,,hhmarinov@uni-sofia.bg:/home/students/s62485:/bin/bash
+s62486:x:1115:1003:Катерина Павлова,,,,kgpavlova@uni-sofia.bg:/home/students/s62486:/bin/bash
+s62487:x:1116:1003:Снежана Митева,,,,snezhanamm@uni-sofia.bg:/home/students/s62487:/bin/bash
+s62488:x:1117:1003:Владислав Петров,,,,vladislanp@uni-sofia.bg:/home/students/s62488:/bin/bash
+s62489:x:1118:1003:Георги Йоков,,,,gjokov@uni-sofia.bg:/home/students/s62489:/bin/bash
+s62490:x:1119:1003:Спас Спасов,,,,srspasov@uni-sofia.bg:/home/students/s62490:/bin/bash
+s62491:x:1120:1003:Калина Лачева,,,,kali.lacheva@gmail.com:/home/students/s62491:/bin/bash
+s62492:x:1121:1003:Мартин Нанков,,,,miph.kappa@gmail.com:/home/students/s62492:/bin/bash
+s62493:x:1122:1003:Цветомир Гълъбов,,,,cgulubov@uni-sofia.bg:/home/students/s62493:/bin/bash
+s62494:x:1123:1003:Весела Петрова,,,,petrovavesela00@gmail.com:/home/students/s62494:/bin/bash
+s62495:x:1124:1003:Анита Разпопова,,,,arazpopova@uni-sofia.bg:/home/students/s62495:/bin/bash
+s62497:x:1125:1003:Асибе Халачева,,,,arhalachev@uni-sofia.bg:/home/students/s62497:/bin/bash
+s62498:x:1126:1003:Веселина Послийска,,,,vposlijska@uni-sofia.bg:/home/students/s62498:/bin/bash
+s62500:x:1127:1003:Преслава Великова,,,,prvelikova@abv.bg:/home/students/s62500:/bin/bash
+s62501:x:1128:1003:Габриела Костова,,,,gaboran4o@abv.bg:/home/students/s62501:/bin/bash
+s62503:x:1129:1003:Марина Дабова,,,,dabova@uni-sofia.bg:/home/students/s62503:/bin/bash
+s62504:x:1130:1003:Елеонела Горанова,,,,egoranowa@gmail.com:/home/students/s62504:/bin/bash
+s62505:x:1131:1003:Иван Лаков,,,,vankatalakov@gmail.com:/home/students/s62505:/bin/bash
+s62506:x:1132:1003:Нели Такова,,,,natakova@uni-sofia.bg:/home/students/s62506:/bin/bash
+s62507:x:1133:1003:Мирела Граматикова,,,,mdgramatik@uni-sofia.bg:/home/students/s62507:/bin/bash
+s62510:x:1134:1003:Петър Буров,,,,pkburov@uni-sofia.bg:/home/students/s62510:/bin/bash
+s71848:x:1135:1003:Симона Илиева,,,,smetodievi@uni-sofia.bg:/home/students/s71848:/bin/bash
+s71861:x:1136:1003:Даниел Каменов,,,,dikamenov@uni-sofia.bg:/home/students/s71861:/bin/bash
+s71865:x:1137:1003:Християн Петков,,,,hristijasp@uni-sofia.bg:/home/students/s71865:/bin/bash
+s71875:x:1138:1003:Иф Антонов,,,,inantonov@uni-sofia.bg:/home/students/s71875:/bin/bash
+s71879:x:1139:1003:Милица Гечева,,,,milicasgp@gmail.com:/home/students/s71879:/bin/bash
+s71880:x:1140:1003:Сашо Цолов,,,,sscolov@uni-sofia.bg:/home/students/s71880:/bin/bash
+s71884:x:1141:1003:Мерилин Писина,,,,pisina@uni-sofia.bg:/home/students/s71884:/bin/bash
+s71885:x:1142:1003:Иван Тодоров,,,,ittodorov1@uni-sofia.bg:/home/students/s71885:/bin/bash
+s71907:x:1143:1003:Борис Христов,,,,borisdh@uni-sofia.bg:/home/students/s71907:/bin/bash
+s71913:x:1144:1003:Йоан Цвятков,,,,jcvjatkov@uni-sofia.bg:/home/students/s71913:/bin/bash
+s71957:x:1145:1003:Радина Нунева,,,,r_nuneva@abv.bg:/home/students/s71957:/bin/bash
+s71985:x:1146:1003:Иво Маринов,,,,ilievm@uni-sofia.bg:/home/students/s71985:/bin/bash
+s855305:x:1147:1003:Марк Кружков,,,,markpavel99@gmail.com:/home/students/s855305:/bin/bash
+s855315:x:1148:1003:Олександр Телпис,,,,telpis@uni-sofia.bg:/home/students/s855315:/bin/bash
+s855322:x:1149:1003:Влад Павлов,,,,vladp@uni-sofia.bg:/home/students/s855322:/bin/bash
+s855326:x:1150:1003:Мартин Горгиевски,,,,gorgievski@uni-sofia.bg:/home/students/s855326:/bin/bash
+s855330:x:1151:1003:Иван Даневски,,,,idanevski@uni-sofia.bg:/home/students/s855330:/bin/bash
+s855339:x:1152:1003:Олексий Балев,,,,alexbalev44022@gmail.com:/home/students/s855339:/bin/bash
+student:x:1153:1003:Студент Студентов,,,:/home/students/student:/bin/bash
+s62267:x:1154:1003:Айлин Кьойбашиева,,,,akuojbashi@uni-sofia.bg:/home/students/s62267:/bin/bash
+s62264:x:1155:1003:Румен Минчев,,,,rumensm@uni-sofia.bg:/home/students/s62264:/bin/bash
+s62263:x:1156:1003:Йордан Ангелов,,,,jangelov1@uni-sofia.bg:/home/students/s62263:/bin/bash
+s62287:x:1157:1003:Деница Йолова,,,,dijolova@uni-sofia.bg:/home/students/s62287:/bin/bash
+s62226:x:1158:1003:Никола Светославов,,,,justsvetoslavov@abv.bg:/home/students/s62226:/bin/bash
+s62338:x:1159:1003:Борислава Бърдарска,,,,bburdarska@uni-sofia.bg:/home/students/s62338:/bin/bash
+s62225:x:1160:1003:Теодора Иванова,,,,t.ivanova3577@gmail.com:/home/students/s62225:/bin/bash
+s62142:x:1161:1003:Наталия Янчева,,,,natalijadj@uni-sofia.bg:/home/students/s62142:/bin/bash
+s62134:x:1162:1003:Димитър Лазаров,,,,miteto66@gmail.com:/home/students/s62134:/bin/bash
+s62284:x:1163:1003:Димитър Дотков,,,,ddotkov@uni-sofia.bg:/home/students/s62284:/bin/bash
+s62281:x:1164:1003:Борислава Борисова,,,,pavlovab@uni-sofia.bg:/home/students/s62281:/bin/bash
+s62027:x:1165:1003:Ния Райкова,,,,nrrajkova@uni-sofia.bg:/home/students/s62027:/bin/bash
+s61839:x:1166:1003:Александър Сариков,,,,sarikov@uni-sofia.bg:/home/students/s61839:/bin/bash
+s62118:x:1167:1003:Марио Илиев,,,,marioki@uni-sofia.bg:/home/students/s62118:/bin/bash
+s62166:x:1168:1003:Димитър Райчев,,,,dirajchev@uni-sofia.bg:/home/students/s62166:/bin/bash
+s62188:x:1169:1003:Белла Събева,,,,bellasabewa98@abv.bg:/home/students/s62188:/bin/bash
+s62342:x:1170:1003:Любка Ангелинина,,,,langelinin@uni-sofia.bg:/home/students/s62342:/bin/bash
+s62156:x:1171:1003:Олег Александров,,,,oaaleksand@uni-sofia.bg:/home/students/s62156:/bin/bash
+s62119:x:1172:1003:Тони Стоянов,,,,tohnkz@abv.bg:/home/students/s62119:/bin/bash
+s62099:x:1173:1003:Димо Апостолов,,,,dkapostolo@uni-sofia.bg:/home/students/s62099:/bin/bash
+s62308:x:1174:1003:Ати Мускова,,,,amuskova@uni-sofia.bg:/home/students/s62308:/bin/bash
+s62246:x:1175:1003:Кристина Киримова,,,,kkirimova@uni-sofia.bg:/home/students/s62246:/bin/bash
+s62366:x:1176:1003:Виктория Цочева,,,,vcocheva@uni-sofia.bg:/home/students/s62366:/bin/bash
+s62364:x:1177:1003:Деница Дамбова,,,,dndambova@uni-sofia.bg:/home/students/s62364:/bin/bash
+s62239:x:1178:1003:Кристина Асенова,,,,kasenovaa@abv.bg:/home/students/s62239:/bin/bash
+s62190:x:1179:1003:Борис Петров,,,,borisep@uni-sofia.bg:/home/students/s62190:/bin/bash
+s62223:x:1180:1003:Антоан Димитров,,,,antoan.nd@gmail.com:/home/students/s62223:/bin/bash
+s855334:x:1181:1003:Антон Бахов,,,,antonbakhovmi@gmail.com:/home/students/s855334:/bin/bash
+s61968:x:1182:1003:Елена Янкова,,,,edimitrovj@uni-sofia.bg:/home/students/s61968:/bin/bash
+s62199:x:1183:1003:Никола Петров,,,,nikola400@abv.bg:/home/students/s62199:/bin/bash
+s26518:x:1184:1003:Стойко Стоев,,,,s.d.stoev@gmail.com:/home/students/s26518:/bin/bash
+s62020:x:1185:1003:Владимир Кралев,,,,vkralev1996@abv.bg:/home/students/s62020:/bin/bash
+s62031:x:1186:1003:Ивета Младенова,,,,i.d.mladenova@gmail.com:/home/students/s62031:/bin/bash
+s62179:x:1187:1003:Радина Динева,,,,spacex13@abv.bg:/home/students/s62179:/bin/bash
+s62195:x:1188:1003:Ваня Петрова,,,,vstefanovp@uni-sofia.bg:/home/students/s62195:/bin/bash
+s62228:x:1189:1003:Петя Петрова,,,,pveselino1@uni-sofia.bg:/home/students/s62228:/bin/bash
+s62245:x:1190:1003:Димо Димов,,,,dimond@uni-sofia.bg:/home/students/s62245:/bin/bash
+s62247:x:1191:1003:Кристина Йотова,,,,ktjotova@uni-sofia.bg:/home/students/s62247:/bin/bash
+s62254:x:1192:1003:Едже Хаджъсюлюш,,,,hadzhusjul@uni-sofia.bg:/home/students/s62254:/bin/bash
+s62256:x:1193:1003:Георги Димитров,,,,gtdimitrov99@gmail.com:/home/students/s62256:/bin/bash
+s62266:x:1194:1003:Зорница Димова,,,,zjdimova@uni-sofia.bg:/home/students/s62266:/bin/bash
+s62269:x:1195:1003:Зехра Илияз,,,,ilijaz@uni-sofia.bg:/home/students/s62269:/bin/bash
+s62286:x:1196:1003:Мартин Георгиев,,,,martingg1@uni-sofia.bg:/home/students/s62286:/bin/bash
+s62293:x:1197:1003:Гергана Цветкова,,,,gcvetomiro@uni-sofia.bg:/home/students/s62293:/bin/bash
+s62298:x:1198:1003:Александър Николов,,,,aknikolov@uni-sofia.bg:/home/students/s62298:/bin/bash
+s62302:x:1199:1003:Павел Петков,,,,pnpetkov1@uni-sofia.bg:/home/students/s62302:/bin/bash
+s62303:x:1200:1003:Иван Спасов,,,,johnspasov99@gmail.com:/home/students/s62303:/bin/bash
+s62304:x:1201:1003:Живко Георгиев,,,,zhivko.m.georgiev@gmail.com:/home/students/s62304:/bin/bash
+s62307:x:1202:1003:Николай Георгиев,,,,nmarius@uni-sofia.bg:/home/students/s62307:/bin/bash
+s62313:x:1203:1003:Калина Каменова,,,,kamenova1@uni-sofia.bg:/home/students/s62313:/bin/bash
+s62316:x:1204:1003:Павлета Станева,,,,stanevapavleta@gmail.com:/home/students/s62316:/bin/bash
+s62318:x:1205:1003:Елиа Младенова,,,,eliam@uni-sofia.bg:/home/students/s62318:/bin/bash
+s62320:x:1206:1003:Йордан Владов,,,,jsvladov@uni-sofia.bg:/home/students/s62320:/bin/bash
+s62325:x:1207:1003:Анастасия Кичукова,,,,askichukov@uni-sofia.bg:/home/students/s62325:/bin/bash
+s62328:x:1208:1003:Кристиян Стоянов,,,,kristijas1@uni-sofia.bg:/home/students/s62328:/bin/bash
+s62337:x:1209:1003:Ивана Тонева,,,,ibtoneva@uni-sofia.bg:/home/students/s62337:/bin/bash
+s62349:x:1210:1003:Владислав Стефанов,,,,vivovs@uni-sofia.bg:/home/students/s62349:/bin/bash
+s62353:x:1211:1003:Георги Кацарски,,,,gvkacarski@uni-sofia.bg:/home/students/s62353:/bin/bash
+s62355:x:1212:1003:Димитър Манчев,,,,damanchev@uni-sofia.bg:/home/students/s62355:/bin/bash
+s62356:x:1213:1003:Добромир Колев,,,,dobromirnk@uni-sofia.bg:/home/students/s62356:/bin/bash
+s62365:x:1214:1003:Силвия Стоянова,,,,silvijars1@uni-sofia.bg:/home/students/s62365:/bin/bash
+s71847:x:1215:1003:Атанас Тумбалев,,,,tumbalev10@gmail.com:/home/students/s71847:/bin/bash
+s71899:x:1216:1003:Георги Катевски,,,,katevski@uni-sofia.bg:/home/students/s71899:/bin/bash
+s71918:x:1217:1003:Августин Гочев,,,,tinkoto99@gmail.com:/home/students/s71918:/bin/bash
+s82245:x:1218:1003:Станислав Николов,,,,stanislacn@uni-sofia.bg:/home/students/s82245:/bin/bash
+s62236:x:1219:1003:Христиана Христова,,,,hzhristova@uni-sofia.bg:/home/students/s62236:/bin/bash
+s62232:x:1220:1003:Александра Иванова,,,,alex_6666@abv.bg:/home/students/s62232:/bin/bash
+s62098:x:1221:1003:Велизар Връбчев,,,,vvrubchev@uni-sofia.bg:/home/students/s62098:/bin/bash
+s62101:x:1222:1003:Георги Георгиев,,,,gvasilevg@uni-sofia.bg:/home/students/s62101:/bin/bash
+s62168:x:1223:1003:Икбал Расимов,,,,rasimov@uni-sofia.bg:/home/students/s62168:/bin/bash
+s15001:x:1224:1003:Евгени Василев,,,,evgenipv@uni-sofia.bg:/home/students/s15001:/bin/bash
+s15002:x:1225:1003:Мелиса Мейманова,,,,mejmanova@uni-sofia.bg:/home/students/s15002:/bin/bash
+s15005:x:1226:1003:Габриела Иванова,,,,gabrieladi@uni-sofia.bg:/home/students/s15005:/bin/bash
+s15006:x:1227:1003:Георги Джамбазов,,,,dzhambazo@uni-sofia.bg:/home/students/s15006:/bin/bash
+s15007:x:1228:1003:Ивона Иванова,,,,kiaraivanova.99@gmail.com:/home/students/s15007:/bin/bash
+s15008:x:1229:1003:Александър Тенев,,,,attenev@uni-sofia.bg:/home/students/s15008:/bin/bash
+s15009:x:1230:1003:Магдалена Владиславова,,,,wonder.99@abv.bg:/home/students/s15009:/bin/bash
+s15012:x:1231:1003:Денислав Баров,,,,dabarov@uni-sofia.bg:/home/students/s15012:/bin/bash
+s15013:x:1232:1003:Милена Джамбазова,,,,mviktorovd@uni-sofia.bg:/home/students/s15013:/bin/bash
+s15016:x:1233:1003:Димитър Андонов,,,,dandonov1@uni-sofia.bg:/home/students/s15016:/bin/bash
+s15017:x:1234:1003:Никола Анчев,,,,nhanchev@uni-sofia.bg:/home/students/s15017:/bin/bash
+s62251:x:1235:1003:Александър Найденов,,,,anzheln@uni-sofia.bg:/home/students/s62251:/bin/bash
+s855272:x:1236:1003:Елвир Максути,,,,elvir-l@live.com:/home/students/s855272:/bin/bash
+s855317:x:1237:1003:Денис Азизович,,,,azizovich@uni-sofia.bg:/home/students/s855317:/bin/bash
+s62108:x:1238:1003:Шериф Кунч,,,,kunch@uni-sofia.bg:/home/students/s62108:/bin/bash
+s61906:x:1240:1003:Кремена Петкова,,,,kremenaip@uni-sofia.bg:/home/students/s61906:/bin/bash
+s61958:x:1241:1003:Мартин Йотов,,,,mhjotov@uni-sofia.bg:/home/students/s61958:/bin/bash
+s61971:x:1242:1003:Калоян Дочев,,,,kidochev@uni-sofia.bg:/home/students/s61971:/bin/bash
+s61973:x:1243:1003:Нено Петракиев,,,,npetrakiev@uni-sofia.bg:/home/students/s61973:/bin/bash
+s61977:x:1244:1003:Кирил Дойчинов,,,,kndojchino@uni-sofia.bg:/home/students/s61977:/bin/bash
+s62028:x:1245:1003:Пламен Христов,,,,dead978@gmail.com:/home/students/s62028:/bin/bash
+s62064:x:1246:1003:Стефан Николов,,,,stefansn@uni-sofia.bg:/home/students/s62064:/bin/bash
+s62129:x:1247:1003:Ина Георгиева,,,,inaeg98@gmail.com:/home/students/s62129:/bin/bash
+s62141:x:1248:1003:Йоанна Петкова,,,,jo.petkova.13@gmail.com:/home/students/s62141:/bin/bash
+s62160:x:1249:1003:Венияна Цолова,,,,veniqna@abv.bg:/home/students/s62160:/bin/bash
+s62171:x:1250:1003:Дейвид Метанов,,,,metanov@uni-sofia.bg:/home/students/s62171:/bin/bash
+s62178:x:1251:1003:Стефан Пелке,,,,kvaki4@abv.bg:/home/students/s62178:/bin/bash
+s62205:x:1252:1003:Елизар Емануилов,,,,elizaremanuilov@gmail.com:/home/students/s62205:/bin/bash
+s62233:x:1253:1003:Калоян Кралев,,,,kkralev@uni-sofia.bg:/home/students/s62233:/bin/bash
+s62273:x:1254:1003:Георги Ковачев,,,,gskovachev@uni-sofia.bg:/home/students/s62273:/bin/bash
+s62285:x:1255:1003:Станимир Петров,,,,sspetrov1@uni-sofia.bg:/home/students/s62285:/bin/bash
+s62296:x:1256:1003:Георги Демирев,,,,gvdemirev@uni-sofia.bg:/home/students/s62296:/bin/bash
+s62300:x:1257:1003:Весела Попова,,,,veselasp@uni-sofia.bg:/home/students/s62300:/bin/bash
+s62314:x:1258:1003:Александър Пехливанов,,,,apehlivano@uni-sofia.bg:/home/students/s62314:/bin/bash
+s71896:x:1259:1003:Владислав Цветанов,,,,vladislanc@uni-sofia.bg:/home/students/s71896:/bin/bash
+s855293:x:1260:1003:Ален Мемиши,,,,memishi@uni-sofia.bg:/home/students/s855293:/bin/bash
+s855327:x:1261:1003:Сандра Мицевска,,,,smicevska@uni-sofia.bg:/home/students/s855327:/bin/bash
+s855328:x:1262:1003:Сара Мицевска,,,,micevska@uni-sofia.bg:/home/students/s855328:/bin/bash
+s777:x:1263:1003::/home/students/s777:/bin/bash
+s61874:x:1264:1003:Доника Пенева,,,,dspeneva@uni-sofia.bg:/home/students/s61874:/bin/bash
+s61879:x:1265:1003:Михаела Чакова,,,,michakova@uni-sofia.bg:/home/students/s61879:/bin/bash
+s61912:x:1266:1003:Радослав Филипов,,,,rpfilipov@uni-sofia.bg:/home/students/s61912:/bin/bash
+s62050:x:1267:1003:Иван Ганчев,,,,igganchev@uni-sofia.bg:/home/students/s62050:/bin/bash
+s62090:x:1268:1003:Алекс Моллов,,,,ajmollov@uni-sofia.bg:/home/students/s62090:/bin/bash
+s62261:x:1269:1003:Божидар Навчев,,,,navchev@uni-sofia.bg:/home/students/s62261:/bin/bash
+s81800:x:1270:1003:Калоян Тодорков,,,,todorkov@uni-sofia.bg:/home/students/s81800:/bin/bash
+s62040:x:1271:1003::/home/students/s62040:/bin/bash
+s14778:x:1272:1003::/home/students/s14778:/bin/bash

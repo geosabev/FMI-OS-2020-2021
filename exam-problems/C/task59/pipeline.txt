@@ -1,0 +1,1 @@
+cut -d : -f 7 /etc/passwd | sort | uniq -c | sort -n -k 1
