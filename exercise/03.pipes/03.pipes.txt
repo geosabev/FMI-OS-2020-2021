@@ -1,0 +1,241 @@
+УСЛОВИЯ НА ЗАДАЧИТЕ ОТ РАЗДЕЛ PIPES И ПРИМЕРНИ РЕШЕНИЯ КЪМ ТЯХ
+- ОС - летен семестър, 2020/2021 г., СИ, Георги Събев
+
+01. (03-a-0200) Сортирайте /etc/passwd лексикографски по поле UserID.
+- cat /etc/passwd | sort -t : -k 3
+
+02. (03-a-0201) Сортирайте /etc/passwd числово по поле UserID. (Открийте разликите с лексикографската сортировка)
+- cat /etc/passwd | sort -n -t : -k 3
+
+03. (03-a-0210) Изведете само 1-ва и 5-та колона на файла /etc/passwd спрямо разделител ":".
+- awk -F : '{print $1" "$5}' /etc/passwd
+- cut -d : -f 1,5 /etc/passwd
+
+04. (03-a-0211) Изведете съдържанието на файла /etc/passwd от 2-ри до 6-ти символ.
+- cut -c 2-6 /etc/passwd
+
+05. (03-a-0212) Отпечатайте потребителските имена и техните home директории от /etc/passwd.
+- awk -F : '{print $1" "$6}' /etc/passwd
+
+06. (03-a-0213) Отпечатайте втората колона на /etc/passwd, разделена спрямо символ '/'.
+- cut -d / -f 2 /etc/passwd
+
+07. (03-a-1500) Изведете броя на байтовете в /etc/passwd. Изведете броя на символите в /etc/passwd. Изведете броя на редовете в /etc/passwd.
+- wc -c -m -l /etc/passwd
+
+08. (03-a-2000) С отделни команди, извадете от файл /etc/passwd: първите 12 реда; първите 26 символа; всички редове, освен последните 4; последните 17 реда;
+151-я ред (или друг произволен, ако нямате достатъчно редове); последните 4 символа от 13-ти ред (символът за нов ред не е част от реда)
+- head -n 12 /etc/passwd
+- head -c 26 /etc/passwd
+- head -n -4 /etc/passwd
+- tail -n 17 /etc/passwd
+- head -n 151 /etc/passwd | tail -n 1
+- head -n 13 /etc/passwd | tail -n 1 | head -c -1 | tail -c 4
+
+09. (03-a-3000) Запаметете във файл в своята home директория резултатът от командата `df -P`.
+Напишете команда, която извежда на екрана съдържанието на този файл, без първия ред (хедъра), сортирано по второ поле (numeric).
+- df -P > output.txt
+- cat output.txt | tail -n +2 | sort -n -k 2
+
+10. (03-a-5000) Изведете реда от /etc/passwd, на който има информация за вашия потребител. Изведедете този ред и двата реда преди него.
+Изведете този ред, двата преди него, и трите след него. Изведете *само* реда, който се намира 2 реда преди реда, съдържащ информация за вашия потребител.
+- cat /etc/passwd | grep s62380
+- cat /etc/passwd | grep -B 2 s62380
+- cat /etc/passwd | grep -B 2 -A 3 s62380
+- cat /etc/passwd | grep -B 2 s62380 | head -n 1
+
+11. (03-a-5001) Изведете колко потребители не изпозват /bin/bash за login shell според /etc/passwd.
+- cat /etc/passwd | grep -v /bin/bash | wc -l
+
+12. (03-a-5002) Изведете само имената на хората с второ име по-дълго от 6 символа според /etc/passwd.
+- cat /etc/passwd | cut -d ':' -f 5 | cut -d ',' -f 1 | egrep "^[^ ]* \w{7,}$"
+
+13. (03-a-5003) Изведете имената на хората с второ име по-късо от 8 символа според /etc/passwd.
+- cat /etc/passwd | cut -d ':' -f 5 | cut -d ',' -f 1 | egrep "^[^ ]* \w{1,7}$"
+
+14. (03-a-5004) Изведете целите редове от /etc/passwd за хората от 03-a-5003.
+- egrep "$(cat /etc/passwd | cut -d ':' -f 5 | cut -d ',' -f 1 | egrep "^[^ ]* \w{1,7}$")" /etc/passwd
+
+15. (03-b-0300) Намерете само Group ID-то си от файлa /etc/passwd.
+- cat /etc/passwd | cut -d ':' -f 1,4 | grep "s62380" | cut -d ':' -f 2
+
+16. (03-b-3000) Запазете само потребителските имена от /etc/passwd във файл users във вашата home директория.
+- cat /etc/passwd | cut -d ':' -f 1 > ~/users
+
+17. (03-b-3400) Колко коментара има във файла /etc/services? Коментарите се маркират със символа #, след който всеки символ на реда се счита за коментар.
+- cat /etc/services | egrep "^.*#.*$" | wc -l
+
+18. (03-b-3500) Колко файлове в /bin са 'shell script'-oве? (Колко файлове в дадена директория са ASCII text?)
+- find /usr/bin -type f -executable 2>/dev/null | xargs -I {} -n 1 file {} | egrep "script" | wc -l
+
+19. (03-b-3600) Направете списък с директориите на вашата файлова система, до които нямате достъп. Понеже файловата система може да е много голяма, търсете до 3 нива на дълбочина.
+- find / -maxdepth 3 -type d 2>&1 | grep "Permission denied" | egrep -o "‘.*’" | sed "s/‘//g;s/’//g"
+
+20. (03-b-4000) Създайте следната файлова йерархия в home директорията ви:
+dir5/file1; dir5/file2; dir5/file3
+Посредством vi въведете следното съдържание:
+file1:  
+1
+2
+3
+file2:
+s
+a
+d
+f
+file3:
+3
+2
+1
+45
+42
+14
+1
+52
+
+Изведете на екрана: статистика за броя редове, думи и символи за всеки един файл; статистика за броя редове и символи за всички файлове; общия брой редове на трите файла.
+- брой редове, думи и символи за всеки файл отделно: find ~/dir5/ -type f | xargs wc -lwm
+- брой редове и символи общо: find ~/dir5/ -type f | xargs cat | wc -lm
+- брой редове общо: find ~/dir5/ -type f | xargs cat | wc -l
+
+21. (03-b-4001) Във file2 подменете всички малки букви с главни.
+- sed -i 's/[a-z]/\U&/g' file2
+
+22. (03-b-4002) Във file3 изтрийте всички "1"-ци.
+- sed -i '/1/d' file3
+
+23. (03-b-4003) Изведете статистика за най-често срещаните символи в трите файла.
+- cat file1 file2 file3 | grep -o '.' | sort | uniq -c | sort -nrk 1
+
+24. (03-b-4004) Направете нов файл с име по ваш избор, който е конкатенация от file{1,2,3}.
+- cat file1 file2 file3 > file4
+
+25. (03-b-4005) Прочетете текстов файл file1 и направете всички главни букви малки като запишете резултата във file2.
+- sed 's/[A-Z]/\L&/g' file1 > file2
+
+26. (03-b-5200) Изтрийте всички срещания на буквата 'a' (lower case) в /etc/passwd и намерете броят на оставащите символи.
+- cat /etc/passwd | tr -d a | wc -m
+
+27. (03-b-5300) Намерете броя на уникалните символи, използвани в имената на потребителите от /etc/passwd.
+- cat /etc/passwd | cut -d ':' -f 1 | grep -o "." | sort | uniq -c | awk '{print $1,$2}' | egrep "^1 " | wc -l
+
+28. (03-b-5400) Отпечатайте всички редове на файла /etc/passwd, които не съдържат символния низ 'ov'.
+- cat /etc/passwd | grep -v "ov"
+
+29. (03-b-6100) Отпечатайте последната цифра на UID на всички редове между 28-ми и 46-ред в /etc/passwd.
+- cat /etc/passwd | head -n 46 | tail -n +28 | cut -d ':' -f 3 | grep -o ".$"
+
+30. (03-b-6700) Отпечатайте правата (permissions) и имената на всички файлове, до които имате read достъп, намиращи се в директорията /tmp. (hint: 'man find', вижте -readable)
+- find /tmp -type f -readable -printf "%m %p\n" 2>/dev/null
+
+31. (03-b-6900) Намерете имената на 10-те файла във вашата home директория, чието съдържание е редактирано най-скоро. На първо място трябва да бъде най-скоро редактираният файл.
+Намерете 10-те най-скоро достъпени файлове. (hint: Unix time)
+- find ~ -type f -printf "%T@ %f \n" | sort -nrk 1 | head -n 10 | cut -d " " -f 2-
+- find ~ -type f -printf "%A@ %f \n" | sort -nrk 1 | head -n 10 | cut -d " " -f 2-
+
+32. (03-b-7000) Файловете, които съдържат C код, завършват на `.c`. Колко на брой са те във файловата система (или в избрана директория)? Колко реда C код има в тези файлове?
+- брой файлове: find ~ -type f -name "*.c" | wc -l
+- брой редове във всеки файл: find ~ -type f -name "*.c" | xargs wc -l
+
+33. (03-b-7500) Даден ви е ASCII текстов файл (например /etc/services). Отпечатайте хистограма на N-те (например 10) най-често срещани думи.
+- cat /etc/services | egrep -o "\s*\w+" | sed 's/ //g' | sort | uniq -c | awk '{print $1,$2}' | sort -nrk 1 | head -n 10
+
+34. (03-b-8000) Вземете факултетните номера на студентите от СИ и ги запишете във файл si.txt сортирани.
+- cat /etc/passwd | grep "$(cat /etc/passwd | grep "$(whoami)" | cut -d ':' -f 4)" | cut -d ':' -f 1 | egrep '^s[[:digit:]]+$' | cut -c 2- | sort -n > si.txt
+
+35. (03-b-8500) За всеки група от /etc/group изпишете "Hello, група", като ако това е вашата група, напишете "Hello, група - this is me!".
+- cat /etc/group | cut -d ':' -f 1 | awk -v var=$(groups) -F ":" '{if ($1 == var) printf "Hello, %s - this is me!\n",$1; else printf "Hello, %s!\n",$1}'
+
+36. (03-b-8520) Изпишете всички usernames от /etc/passwd с главни букви.
+- cat /etc/passwd | cut -d ':' -f 1 | sed 's/[a-z]/\U&/g'
+
+37. (03-b-8600) Shell Script-овете са файлове, които по конвенция имат разширение .sh.
+Всеки такъв файл започва с "#!<interpreter>" , където <interpreter> указва на операционната система какъв интерпретатор да пусне (пр: "#!/bin/bash", "#!/usr/bin/python3 -u"). 
+Намерете всички .sh файлове и проверете кой е най-често използваният интерпретатор.
+- find / -type f -name "*.sh" 2>/dev/null | xargs cat 2>/dev/null | egrep "^#.*" | egrep "#!" | sort | uniq -c | sort -nrk 1 | head -n 1
+
+38. (03-b-8700) Намерете 5-те най-големи групи подредени по броя на потребителите в тях.
+- cat /etc/passwd | cut -d ':' -f 4 | sort | uniq -c | awk '{print $1,$2}' | sort -nrk 1 | head -n 5
+
+39. (03-b-9000) Направете файл eternity. Намерете всички файлове, които са били модифицирани в последните 15мин (по възможност изключете .).
+Запишете във eternity името на файла и часa на последната промяна.
+- find / -type f -mmin -16 2>/dev/null > eternity
+
+40. (03-b-9050) Копирайте файл /home/tony/population.csv във вашата home директория.
+- cp /home/tony/population.csv ~
+
+41. (03-b-9051) Използвайки файл population.csv, намерете колко е общото население на света през 2008 година. А през 2016?
+- cat population.csv | egrep -o ',2008,.*$' | cut -d ',' -f 3 | awk '{total += $1} END {print total}'
+- cat population.csv | egrep -o ',2016,.*$' | cut -d ',' -f 3 | awk '{total += $1} END {print total}'
+
+42. (03-b-9052) Използвайки файл population.csv, намерете през коя година в България има най-много население.
+- cat population.csv | grep "Bulgaria" | cut -d ',' -f 3,4 | sort -nr -t ',' -k 2 | head -n 1 | cut -d ',' -f 1
+
+43. (03-b-9053) Използвайки файл population.csv, намерете коя държава има най-много население през 2016. А коя е с най-малко население?
+(Hint: Погледнете имената на държавите)
+- cat population.csv | grep '2016,' | awk -F "," '{print $NF,$0}' | sort -n -k 1 | cut -d " " -f 2- | tail -n 1
+- cat population.csv | grep '2016,' | awk -F "," '{print $NF,$0}' | sort -n -r -k 1 | cut -d " " -f 2- | tail -n 1
+- ИЛИ grep -e ,$(egrep -o '2016,[0-9]+' population.csv | awk -F ',' '{print $2}' | sort -n | head -n 1)$ population.csv | egrep -o '(^[a-zA-Z ]+)|(^".+")' | sed 's/"//' | sed 's/"//'
+
+44. (03-b-9054) Използвайки файл population.csv, намерете коя държава е на 42-ро място по население през 1969. Колко е населението й през тази година?
+- cat population.csv | grep ",1996," | sed 's/, / /' | sort -t ',' -nrk 4 | head -n 42 | tail -n 1
+
+45. (03-b-9100) В home директорията си изпълнете командата `curl -o songs.tar.gz "http://fangorn.uni-sofia.bg/misc/songs.tar.gz"`
+- curl -o songs.tar.gz "http://fangorn.uni-sofia.bg/misc/songs.tar.gz"
+
+46. (03-b-9101) Да се разархивира архивът songs.tar.gz в папка songs във вашата home директорията.
+- tar -zxf songs.tar.gz -C ./songs
+
+47. (03-b-9102) Да се изведат само имената на песните.
+- find ~/songs -type f -printf "%f \n" | sed "s/\.ogg//g" | cut -d '-' -f 2 | sed 's/^[[:space:]]*//' | cut -d '(' -f 1 | sed 's/[[:space:]]*$//'
+
+48. (03-b-9103) Имената на песните да се направят с малки букви, да се заменят спейсовете с долни черти и да се сортират.
+- find ~/songs -type f -printf "%f \n" | sed "s/\.ogg//g" | cut -d '-' -f 2 | sed 's/^[[:space:]]*//' | cut -d '(' -f 1 | sed 's/[[:space:]]*$//' | tr 'A-Z' 'a-z' | tr ' ' '_' | sort
+
+49. (03-b-9104) Да се изведат всички албуми, сортирани по година.
+- find ~/songs -type f -printf "%f \n" | sed "s/\.ogg//g" | cut -d '(' -f 2 | cut -d ')' -f 1 | sort -n -t ',' -k 2 | uniq
+
+50. (03-b-9105) Да се преброят/изведат само песните на Beatles и Pink.
+- find ~/songs -type f -printf "%f \n" | sed "s/\.ogg//g" | grep -E 'Beatles -|Pink -'
+
+51. (03-b-9106) Да се направят директории с имената на уникалните групи. За улеснение, имената от две думи да се напишат слято:
+Beatles, PinkFloyd, Madness.
+- find ~/songs -type f -printf "%f \n" | sed "s/\.ogg//g" | cut -d "-" -f 1 | tr -d ' ' | sort | uniq | xargs mkdir
+
+52. (03-b-9200) Напишете серия от команди, които извеждат детайли за файловете и директориите в текущата директория,
+които имат същите права за достъп както най-големият файл в /etc директорията.
+- find . -perm $(find /etc -printf "%s %m %p \n" 2>/dev/null| sort -nk 1 | tail -n 1 | cut -d " " -f 2) -print 2>/dev/null | xargs stat
+
+53. (03-b-9300) Дадени са ви 2 списъка с email адреси - първият има 12 валидни адреса, а вторията има само невалидни.
+Филтрирайте всички адреси, така че да останат само валидните. Колко кратък регулярен израз можете да направите за целта?
+Валидни email адреси (12 на брой):
+email@example.com
+firstname.lastname@example.com
+email@subdomain.example.com
+email@123.123.123.123
+1234567890@example.com
+email@example-one.com
+_______@example.com
+email@example.name
+email@example.museum
+email@example.co.jp
+firstname-lastname@example.com
+unusually.long.long.name@example.com
+
+Невалидни email адреси:
+#@%^%#$@#$@#.com
+@example.com
+myemail
+Joe Smith <email@example.com>
+email.example.com
+email@example@example.com
+.email@example.com
+email.@example.com
+email..email@example.com
+email@-example.com
+email@example..com
+Abc..123@example.com
+(),:;<>[\]@example.com
+just"not"right@example.com
+this\ is"really"not\allowed@example.com
+- 
