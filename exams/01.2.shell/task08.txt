@@ -1,0 +1,1 @@
+find "$(cat /etc/passwd | cut -d ':' -f 1,6 | egrep "^pesho:" | cut -d ':' -f 2)" -type f -printf "%n %T@ %i\n" | sort -n -r -t ' ' -k 2 | egrep -v "^0" | head -n 1 | cut -d ' ' -f 3

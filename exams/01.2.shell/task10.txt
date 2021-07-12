@@ -1,0 +1,1 @@
+cat planets.txt | tail -n +2 | sort -n -t ';' -k 3 | egrep ".*;$(cat planets.txt | tail -n +2 | sort -n -r -t ';' -k 3 | head -n 1 | cut -d ';' -f 2);.*" | head -n 1 | cut -d ';' -f 1,4 | tr ';' '\t'

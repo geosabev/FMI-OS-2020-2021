@@ -1,0 +1,2 @@
+а) find . -type f -maxdepth 2 -size 0 2>/dev/null | xargs rm
+б) find ~ -maxdepth 2 -printf "%s %p\n" 2>/dev/null | sort -rn -t ' ' -k 1 | head -n 5 | cut -d ' ' -f 2- | xargs rm
