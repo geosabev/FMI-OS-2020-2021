@@ -1,0 +1,4 @@
+This is my sample
+textfile
+whose content I want to copy using my
+task1 solution.
